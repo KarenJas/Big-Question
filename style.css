@@ -49,35 +49,35 @@ h1 {
 
 #figures {
     position: relative;
-    height: 100px;
+    height: 300px; /* Adjusted height to fit the images */
     margin-top: 20px;
     display: none;
 }
 
 #figures img {
-    width: 100px;
+    width: 150px; /* Adjusted width to fit the images */
     position: absolute;
     bottom: 0;
 }
 
 #girl-left {
-    left: -150px;
+    left: -200px;
     transition: left 2s;
 }
 
 #girl-right {
-    right: -150px;
+    right: -200px;
     transition: right 2s;
 }
 
 #figures.show #girl-left {
     left: 50%;
-    transform: translateX(-100%);
+    transform: translateX(-150%);
 }
 
 #figures.show #girl-right {
     right: 50%;
-    transform: translateX(100%);
+    transform: translateX(150%);
 }
 
 .heart {
