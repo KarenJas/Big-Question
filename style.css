@@ -58,16 +58,15 @@ h1 {
     width: 150px; /* Adjusted width to fit the images */
     position: absolute;
     bottom: 0;
+    transition: transform 2s, left 2s, right 2s;
 }
 
 #girl-left {
     left: -200px;
-    transition: left 2s;
 }
 
 #girl-right {
     right: -200px;
-    transition: right 2s;
 }
 
 #figures.show #girl-left {
