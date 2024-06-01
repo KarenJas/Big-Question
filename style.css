@@ -5,11 +5,16 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
+    background-color: #E6E6FA; /* Pastel purple background */
 }
 
 .container {
     text-align: center;
+}
+
+h1 {
+    color: #ADD8E6; /* Pastel blue letters */
+    text-shadow: 2px 2px 0 #ffffff, -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff;
 }
 
 .answers {
@@ -21,14 +26,15 @@ body {
 
 .answer {
     padding: 20px;
-    background-color: #007BFF;
-    color: white;
+    background-color: #ADD8E6; /* Pastel blue background */
+    color: #ffffff; /* White text */
+    border: 2px solid #ffffff; /* White outline */
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .answer:hover {
-    background-color: #0056b3;
+    background-color: #87CEFA; /* Lighter pastel blue on hover */
 }
 
 #confetti {
