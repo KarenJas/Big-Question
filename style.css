@@ -5,16 +5,11 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #E6E6FA; /* Pastel purple background */
+    background-color: #f0f0f0;
 }
 
 .container {
     text-align: center;
-}
-
-h1 {
-    color: #ADD8E6; /* Pastel blue letters */
-    text-shadow: 2px 2px 0 #ffffff, -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff;
 }
 
 .answers {
@@ -26,15 +21,14 @@ h1 {
 
 .answer {
     padding: 20px;
-    background-color: #ADD8E6; /* Pastel blue background */
-    color: #ffffff; /* White text */
-    border: 2px solid #ffffff; /* White outline */
+    background-color: #007BFF;
+    color: white;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .answer:hover {
-    background-color: #87CEFA; /* Lighter pastel blue on hover */
+    background-color: #0056b3;
 }
 
 #confetti {
@@ -49,34 +43,35 @@ h1 {
 
 #figures {
     position: relative;
-    height: 300px; /* Adjusted height to fit the images */
+    height: 100px;
     margin-top: 20px;
     display: none;
 }
 
 #figures img {
-    width: 150px; /* Adjusted width to fit the images */
+    width: 100px;
     position: absolute;
     bottom: 0;
-    transition: transform 2s, left 2s, right 2s;
 }
 
 #girl-left {
-    left: -200px;
+    left: -150px;
+    transition: left 2s;
 }
 
 #girl-right {
-    right: -200px;
+    right: -150px;
+    transition: right 2s;
 }
 
 #figures.show #girl-left {
     left: 50%;
-    transform: translateX(-150%);
+    transform: translateX(-100%);
 }
 
 #figures.show #girl-right {
     right: 50%;
-    transform: translateX(150%);
+    transform: translateX(100%);
 }
 
 .heart {
