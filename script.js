@@ -1,55 +1,52 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const correctAnswer = document.getElementById('correct-answer');
-    const wrongAnswer = document.getElementById('wrong-answer');
-    const heartContainer = document.getElementById('heart-container');
-    const hugContainer = document.getElementById('hug-container');
-
-    correctAnswer.addEventListener('click', () => {
-        showHeartConfetti();
-        hugContainer.classList.remove('hidden');
-    });
-
-    wrongAnswer.addEventListener('click', () => {
-        shrinkWrongAnswer();
-    });
-
-    function showHeartConfetti() {
-        for (let i = 0; i < 30; i++) {
-            const heart = document.createElement('div');
-            heart.classList.add('heart');
-            heart.style.left = `${Math.random() * 100}%`;
-            heart.style.animationDelay = `${Math.random() * 2}s`;
-            heartContainer.appendChild(heart);
-        }
-    }
-
-    function shrinkWrongAnswer() {
-        const currentWidth = wrongAnswer.offsetWidth;
-        if (currentWidth > 20) {
-            wrongAnswer.style.width = `${currentWidth - 20}px`;
-        } else {
-            wrongAnswer.style.display = 'none';
-        }
-    }
-});
-
-// Add these styles for heart confetti animation
-const style = document.createElement('style');
-style.innerHTML = `
-@keyframes drop {
-    to {
-        transform: translateY(100vh);
+function checkAnswer(answer) {
+    if (answer === 'correct') {
+        showConfetti();
+        showFigures();
+    } else {
+        shrinkBox();
     }
 }
 
-.heart {
-    position: absolute;
-    top: -50px;
-    width: 20px;
-    height: 20px;
-    background-color: red;
-    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 72%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-    animation: drop 2s linear infinite;
+function showConfetti() {
+    const confettiContainer = document.getElementById('confetti');
+    confettiContainer.style.display = 'block';
+
+    // Create heart-shaped confetti
+    for (let i = 0; i < 100; i++) {
+        let heart = document.createElement('div');
+        heart.className = 'heart';
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.animationDelay = Math.random() * 2 + 's';
+        confettiContainer.appendChild(heart);
+    }
 }
-`;
-document.head.appendChild(style);
+
+function showFigures() {
+    const figuresContainer = document.getElementById('figures');
+    figuresContainer.innerHTML = '<img src="https://i.imgur.com/2GVwOeb.png" alt="Figures Hugging">';
+    figuresContainer.style.display = 'block';
+}
+
+function shrinkBox() {
+    const incorrectBox = document.getElementById('answer1');
+    let currentScale = getComputedStyle(incorrectBox).transform;
+
+    // If the current scale is 'none', set it to 1 (100%)
+    if (currentScale === 'none') {
+        currentScale = 1;
+    } else {
+        // Extract the scale value from the matrix (transform property)
+        currentScale = parseFloat(currentScale.split('(')[1].split(')')[0].split(',')[0]);
+    }
+
+    // Calculate the new scale
+    let newScale = currentScale - 0.1;
+
+    // If the new scale is less than or equal to 0, remove the element
+    if (newScale <= 0) {
+        incorrectBox.style.display = 'none';
+    } else {
+        // Apply the new scale
+        incorrectBox.style.transform = `scale(${newScale})`;
+    }
+}
