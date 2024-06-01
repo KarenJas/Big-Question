@@ -23,8 +23,10 @@ function showConfetti() {
 
 function showFigures() {
     const figuresContainer = document.getElementById('figures');
-    figuresContainer.innerHTML = '<img src="https://i.imgur.com/2GVwOeb.png" alt="Figures Hugging">';
     figuresContainer.style.display = 'block';
+    setTimeout(() => {
+        figuresContainer.classList.add('show');
+    }, 100); // Slight delay to trigger the transition
 }
 
 function shrinkBox() {
