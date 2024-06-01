@@ -52,3 +52,4 @@ function shrinkBox() {
         incorrectBox.style.transform = `scale(${newScale})`;
     }
 }
+//test
