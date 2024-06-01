@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Question Answer Game</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Question with Two Answers</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>What is the capital of France?</h1>
-        <div class="answers">
-            <div class="answer" id="answer1" onclick="checkAnswer('incorrect')">Berlin</div>
-            <div class="answer" id="answer2" onclick="checkAnswer('correct')">Paris</div>
+    <div id="question-container">
+        <p>Who is the best superhero?</p>
+        <div id="answers">
+            <div id="correct-answer" class="answer">Batman</div>
+            <div id="wrong-answer" class="answer">Superman</div>
         </div>
-        <div id="confetti"></div>
-        <div id="figures"></div>
+    </div>
+    <div id="heart-container"></div>
+    <div id="hug-container" class="hidden">
+        <img src="hugging-girls.png" alt="Girls Hugging">
     </div>
     <script src="script.js"></script>
 </body>
 </html>
+

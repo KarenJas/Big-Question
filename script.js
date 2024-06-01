@@ -1,58 +1,57 @@
-function checkAnswer(answer) {
-    if (answer === 'correct') {
-        showConfetti();
-        showFigures();
-    } else {
-        shrinkBox();
+document.addEventListener('DOMContentLoaded', () => {
+    const correctAnswer = document.getElementById('correct-answer');
+    const wrongAnswer = document.getElementById('wrong-answer');
+    const heartContainer = document.getElementById('heart-container');
+    const hugContainer = document.getElementById('hug-container');
+
+    correctAnswer.addEventListener('click', () => {
+        showHeartConfetti();
+        hugContainer.classList.remove('hidden');
+    });
+
+    wrongAnswer.addEventListener('click', () => {
+        shrinkWrongAnswer();
+    });
+
+    function showHeartConfetti() {
+        for (let i = 0; i < 30; i++) {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.style.left = `${Math.random() * 100}%`;
+            heart.style.animationDelay = `${Math.random() * 2}s`;
+            heartContainer.appendChild(heart);
+        }
     }
-}
 
-function showConfetti() {
-    const confettiContainer = document.getElementById('confetti');
-    confettiContainer.style.display = 'block';
-
-    // Simple confetti effect (You can use a library for a more advanced effect)
-    for (let i = 0; i < 100; i++) {
-        let confetti = document.createElement('div');
-        confetti.className = 'confetti';
-        confetti.style.left = Math.random() * 100 + 'vw';
-        confetti.style.animationDelay = Math.random() * 2 + 's';
-        confettiContainer.appendChild(confetti);
+    function shrinkWrongAnswer() {
+        const currentWidth = wrongAnswer.offsetWidth;
+        if (currentWidth > 20) {
+            wrongAnswer.style.width = `${currentWidth - 20}px`;
+        } else {
+            wrongAnswer.style.display = 'none';
+        }
     }
-}
+});
 
-function showFigures() {
-    const figuresContainer = document.getElementById('figures');
-    figuresContainer.innerHTML = '<img src="https://i.imgur.com/2GVwOeb.png" alt="Figures Hugging">';
-    figuresContainer.style.display = 'block';
-}
-
-function shrinkBox() {
-    const incorrectBox = document.getElementById('answer1');
-    incorrectBox.style.transform = 'scale(0.8)';
-    incorrectBox.style.backgroundColor = '#ff0000';
-    incorrectBox.style.color = '#ffffff';
-}
-
-// CSS for confetti
+// Add these styles for heart confetti animation
 const style = document.createElement('style');
 style.innerHTML = `
-.confetti {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: #FFC107;
-    animation: fall 4s infinite;
+@keyframes drop {
+    to {
+        transform: translateY(100vh);
+    }
 }
 
-@keyframes fall {
-    0% {
-        transform: translateY(0) rotate(0);
-    }
-    100% {
-        transform: translateY(100vh) rotate(360deg);
-    }
+.heart {
+    position: absolute;
+    top: -50px;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 72%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    animation: drop 2s linear infinite;
 }
 `;
 document.head.appendChild(style);
+
 
