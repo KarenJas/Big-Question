@@ -74,12 +74,12 @@ h1 {
 
 #figures.show #girl-left {
     left: 27.5%;
-    transform: translateX(-150%);
+    transform: translateX(-200%);
 }
 
 #figures.show #girl-right {
     right: 27.5%;
-    transform: translateX(150%);
+    transform: translateX(200%);
 }
 
 .heart {
