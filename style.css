@@ -127,7 +127,7 @@ body {
  }
  
  /* Responsive adjustments */
- @media (max-width: 500px) {
+ @media (max-width: 100px) {
     .answer {
         padding: 10px;
         font-size: 6vw; /* Increase font size for better readability */
