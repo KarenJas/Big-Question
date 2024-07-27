@@ -105,7 +105,7 @@ body {
     }
 
     #girl-left, #girl-right {
-        width: 40px; /* Smaller size for smaller screens */
+        width: 60px; /* Smaller size for smaller screens */
     }
 
     #figures.show #girl-left {
