@@ -61,7 +61,7 @@ body {
  }
  
  #girl-left {
-    width: 30%; /* Adjusted width for responsiveness */
+    width: 10%; /* Adjusted width for responsiveness */
     height: auto; /* Maintains aspect ratio */
     position: absolute;
     bottom: 0;
