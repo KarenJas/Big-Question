@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #E6E6FA; /* Pastel purple background */
+ }
+ 
+ 
+ .container {
+    text-align: center;
+ }
+ 
+ 
+ h1 {
+    color: #ADD8E6; /* Pastel blue letters */
+    text-shadow: 2px 2px 0 #ffffff, -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff;
+ }
+ 
+ 
+ .answers {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+ }
+ 
+ 
+ .answer {
+    padding: 20px;
+    background-color: #ADD8E6; /* Pastel blue background */
+    color: #ffffff; /* White text */
+    border: 2px solid #ffffff; /* White outline */
+    cursor: pointer;
+    transition: all 0.3s ease;
+ }
+ 
+ 
+ .answer:hover {
+    background-color: #87CEFA; /* Lighter pastel blue on hover */
+ }
+ 
+ 
+ #confetti {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    overflow: hidden;
+ }
+ 
+ 
+ #figures {
+    position: relative;
+    height: 300px; /* Adjusted height to fit the images */
+    margin-top: 20px;
+    display: none;
+ }
+ 
+ 
+ #girl-left {
+    width: 200px; /* Adjusted width for the left image */
+    height: auto; /* Maintains aspect ratio */
+    position: absolute;
+    bottom: 0;
+    left: -900px;
+    transition: transform 2s, left 2s;
+ }
+ 
+ 
+ #girl-right {
+    width: 160px; /* Adjusted width for the right image */
+    height: auto; /* Maintains aspect ratio */
+    position: absolute;
+    bottom: 0;
+    right: -900px;
+    transition: transform 2s, right 2s;
+ }
+ 
+ 
+ #figures.show #girl-left {
+    left: 27.5%;
+    transform: translateX(-50%);
+ }
+ 
+ 
+ #figures.show #girl-right {
+    right: 27.5%;
+    transform: translateX(50%);
+ }
+ 
+ 
+ .heart {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    transform: rotate(-45deg);
+    animation: fall 4s infinite;
+ }
+ 
+ 
+ .heart::before,
+ .heart::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+ }
+ 
+ 
+ .heart::before {
+    top: -5px;
+    left: 0;
+ }
+ 
+ 
+ .heart::after {
+    top: 0;
+    left: -5px;
+ }
+ 
+ 
+ @keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+ }
+ 
