@@ -135,7 +135,7 @@ body {
  
     #girl-left,
     #girl-right {
-        width: 20%; /* Increase image size for smaller screens */
+        width: 60%; /* Increase image size for smaller screens */
     }
  
     h1 {
