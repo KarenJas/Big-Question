@@ -110,12 +110,12 @@ body {
 
     #figures.show #girl-left {
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-300%);
     }
 
     #figures.show #girl-right {
         right: 50%;
-        transform: translateX(50%);
+        transform: translateX(30%);
     }
 }
  
