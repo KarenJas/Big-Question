@@ -55,7 +55,7 @@ body {
  
  #figures {
     position: relative;
-    height: 300px; /* Adjusted height to fit the images */
+    height: 200px; /* Adjusted height to fit the images */
     margin-top: 20px;
     display: none;
  }
@@ -70,7 +70,7 @@ body {
  }
  
  #girl-right {
-    width: 30%; /* Adjusted width for responsiveness */
+    width: 160%; /* Adjusted width for responsiveness */
     height: auto; /* Maintains aspect ratio */
     position: absolute;
     bottom: 0;
