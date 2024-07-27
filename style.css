@@ -105,17 +105,17 @@ body {
     }
 
     #girl-left, #girl-right {
-        width: 60px; /* Smaller size for smaller screens */
+        width: 100px; /* Smaller size for smaller screens */
     }
 
     #figures.show #girl-left {
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-80%);
     }
 
     #figures.show #girl-right {
         right: 50%;
-        transform: translateX(50px);
+        transform: translateX(80%);
     }
 }
  
