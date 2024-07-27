@@ -127,7 +127,7 @@ body {
  }
  
  /* Responsive adjustments */
- @media (max-width: 100px) {
+ @media (max-width: 600px) {
     .answer {
         padding: 10px;
         font-size: 6vw; /* Increase font size for better readability */
@@ -135,7 +135,7 @@ body {
  
     #girl-left,
     #girl-right {
-        width: 45%; /* Increase image size for smaller screens */
+        width: 20%; /* Increase image size for smaller screens */
     }
  
     h1 {
