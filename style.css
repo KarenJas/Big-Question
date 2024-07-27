@@ -93,31 +93,7 @@ body {
     transform: translateX(50%);
  }
  
- /* Media queries for responsiveness */
-@media (max-width: 600px) {
-    h1 {
-        font-size: 1.5em;
-    }
-
-    button {
-        font-size: 1.2em;
-        padding: 10px 20px;
-    }
-
-    #girl-left, #girl-right {
-        width: 100px; /* Smaller size for smaller screens */
-    }
-
-    #figures.show #girl-left {
-        left: 50%;
-        transform: translateX(-80%);
-    }
-
-    #figures.show #girl-right {
-        right: 50%;
-        transform: translateX(80%);
-    }
-}
+ 
  
  .heart {
     position: absolute;
