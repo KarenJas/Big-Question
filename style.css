@@ -80,12 +80,12 @@ body {
  
  #figures.show #girl-left {
     left: 27.5%;
-    transform: translateX(-18%); /*-16 */
+    transform: translateX(-16%); /*-16 */
  }
  
  #figures.show #girl-right {
     right: 27.5%;
-    transform: translateX(18%); /*16*/
+    transform: translateX(16%); /*16*/
  }
  
  .heart {
