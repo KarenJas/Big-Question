@@ -70,7 +70,7 @@ body {
  }
  
  #girl-right {
-    width: 23.91%; /* Adjusted width for responsiveness */
+    width: 23.9%; /* Adjusted width for responsiveness */
     height: auto; /* Maintains aspect ratio */
     position: absolute;
     bottom: 0;
@@ -135,7 +135,7 @@ body {
  
     #girl-left,
     #girl-right {
-        width: 60%; /* Increase image size for smaller screens */
+        width: 45%; /* Increase image size for smaller screens */
     }
  
     h1 {
