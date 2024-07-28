@@ -81,13 +81,13 @@ h1 {
 }
 
 #figures.show #girl-left {
-    left: 27.5%; /*  10 Adjusted for better responsiveness */
-    transform: translateX(30);
+    left: 20%; /*  10 Adjusted for better responsiveness */
+    transform: translateX(0);
 }
 
 #figures.show #girl-right {
-    right: 27.5%; /* Adjusted for better responsiveness */
-    transform: translateX(30);
+    right: 20%; /* Adjusted for better responsiveness */
+    transform: translateX(0);
 }
 
 .heart {
