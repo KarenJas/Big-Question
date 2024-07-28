@@ -134,24 +134,24 @@ body {
     }
 
     #girl-left {
-        width: 40%; /* Adjust left image size for smaller screens */
-        left: 10%; /* Adjust left image position for mobile */
+        width: 45%; /* Increase image size for smaller screens */
     }
-
+ 
     #girl-right {
-        width: 40%; /* Adjust right image size for smaller screens */
-        right: 10%; /* Adjust right image position for mobile */
+        width: 45%; /* Increase image size for smaller screens */
     }
-
+ 
     h1 {
         font-size: 8vw; /* Increase font size for better readability */
     }
-   
+ 
     #figures.show #girl-left {
+        left: 5%; /* Adjust left image position for mobile */
         transform: translateX(0);
     }
-
+ 
     #figures.show #girl-right {
+        right: 5%; /* Adjust right image position for mobile */
         transform: translateX(0);
     }
 }
