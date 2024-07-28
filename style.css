@@ -147,7 +147,7 @@ body {
  
     #figures.show #girl-left {
         left: 20%; /* Adjust left image position for mobile */
-        transform: translateX(-10);
+        transform: translateX(10);
     }
  
     #figures.show #girl-right {
