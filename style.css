@@ -147,13 +147,12 @@ body {
     h1 {
         font-size: 8vw; /* Increase font size for better readability */
     }
+   
     #figures.show #girl-left {
-        left: 10%; /* Adjust left image position for mobile */
         transform: translateX(0);
     }
  
     #figures.show #girl-right {
-        right: 10%; /* Adjust right image position for mobile */
         transform: translateX(0);
     }
  }
