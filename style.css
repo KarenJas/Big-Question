@@ -147,11 +147,11 @@ body {
  
     #figures.show #girl-left {
         left: 20%; /* Adjust left image position for mobile */
-        transform: translateX(200);
+        transform: translateX(300);
     }
  
     #figures.show #girl-right {
         right: 20%; /* Adjust right image position for mobile */
-        transform: translateX(200);
+        transform: translateX(300);
     }
 }
