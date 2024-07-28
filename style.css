@@ -126,3 +126,32 @@ body {
     }
  }
  
+ /* Responsive adjustments */
+ @media (max-width: 600px) {
+    .answer {
+        padding: 10px;
+        font-size: 6vw; /* Increase font size for better readability */
+    }
+
+    #girl-left {
+        width: 45%; /* Increase image size for smaller screens */
+    }
+ 
+    #girl-right {
+        width: 45%; /* Increase image size for smaller screens */
+    }
+ 
+    h1 {
+        font-size: 8vw; /* Increase font size for better readability */
+    }
+ 
+    #figures.show #girl-left {
+        left: 20%; /* Adjust left image position for mobile */
+        transform: translateX(10);
+    }
+ 
+    #figures.show #girl-right {
+        right: 20%; /* Adjust right image position for mobile */
+        transform: translateX(10);
+    }
+}
