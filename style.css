@@ -127,32 +127,31 @@ body {
  }
  
  /* Responsive adjustments */
- @media (max-width: 600px) {
+@media (max-width: 600px) {
     .answer {
         padding: 10px;
         font-size: 6vw; /* Increase font size for better readability */
     }
- 
+
     #girl-left {
-        width: 45%; /* Increase image size for smaller screens */
+        width: 40%; /* Adjust left image size for smaller screens */
+        left: 5%; /* Adjust left image position for mobile */
     }
 
     #girl-right {
-        width: 45%; /* Increase image size for smaller screens */
+        width: 40%; /* Adjust right image size for smaller screens */
+        right: 5%; /* Adjust right image position for mobile */
     }
- 
+
     h1 {
         font-size: 8vw; /* Increase font size for better readability */
     }
    
-   #figures.show #girl-left {
-       left: 5%; /* Adjust left image position for mobile */
-       transform: translateX(0);
-   }
+    #figures.show #girl-left {
+        transform: translateX(0);
+    }
 
-   #figures.show #girl-right {
-       right: 5%; /* Adjust right image position for mobile */
-       transform: translateX(0);
-   }
- }
- 
+    #figures.show #girl-right {
+        transform: translateX(0);
+    }
+}
