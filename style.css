@@ -146,12 +146,12 @@ h1 {
     }
 
     #figures.show #girl-left {
-        left: 10%; /* Adjust left image position for mobile */
+        left: 5%; /* Adjust left image position for mobile */
         transform: translateX(0);
     }
 
     #figures.show #girl-right {
-        right: 10%; /* Adjust right image position for mobile */
+        right: 5%; /* Adjust right image position for mobile */
         transform: translateX(0);
     }
 }
