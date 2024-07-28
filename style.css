@@ -135,14 +135,13 @@ body {
  
     #girl-left {
         width: 40%; /* Increase left image size for smaller screens */
-        left: 5%; /* Adjust left image position for mobile */
+        left: 10%; /* Adjust left image position for mobile */
     }
  
     #girl-right {
         width: 50%; /* Increase right image size for smaller screens */
-        right: 5%; /* Adjust right image position for mobile */
+        right: 10%; /* Adjust right image position for mobile */
     }
- 
  
     h1 {
         font-size: 8vw; /* Increase font size for better readability */
