@@ -6,44 +6,46 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #E6E6FA; /* Pastel purple background */
- }
- 
- .container {
+}
+
+.container {
     text-align: center;
     width: 100%;
     padding: 0 10px;
     box-sizing: border-box;
- }
- 
- h1 {
+}
+
+h1 {
     color: #ADD8E6; /* Pastel blue letters */
     text-shadow: 2px 2px 0 #ffffff, -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff;
-    font-size: 5vw; /* Responsive font size */
- }
- 
- .answers {
+    font-size: 8vw; /* Responsive font size */
+}
+
+.answers {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
     margin-top: 20px;
     flex-wrap: wrap;
- }
- 
- .answer {
-    padding: 15px;
+}
+
+.answer {
+    padding: 10px;
     background-color: #ADD8E6; /* Pastel blue background */
     color: #ffffff; /* White text */
     border: 2px solid #ffffff; /* White outline */
     cursor: pointer;
     transition: all 0.3s ease;
     font-size: 4vw; /* Responsive font size */
- }
- 
- .answer:hover {
+    flex: 1 1 45%; /* Adjust flex-basis for responsiveness */
+    max-width: 45%;
+}
+
+.answer:hover {
     background-color: #87CEFA; /* Lighter pastel blue on hover */
- }
- 
- #confetti {
+}
+
+#confetti {
     position: absolute;
     top: 0;
     left: 0;
@@ -51,78 +53,77 @@ body {
     height: 100%;
     display: none;
     overflow: hidden;
- }
- 
- #figures {
+}
+
+#figures {
     position: relative;
     height: 300px; /* Adjusted height to fit the images */
     margin-top: 20px;
     display: none;
- }
- 
- #girl-left {
+}
+
+#girl-left {
     width: 30%; /* Adjusted width for responsiveness */
     height: auto; /* Maintains aspect ratio */
     position: absolute;
     bottom: 0;
     left: -900px;
     transition: transform 2s, left 2s;
- }
- 
- #girl-right {
+}
+
+#girl-right {
     width: 23.889%; /* Adjusted width for responsiveness */
     height: auto; /* Maintains aspect ratio */
     position: absolute;
     bottom: 0;
     right: -900px;
     transition: transform 2s, right 2s;
- }
- 
- #figures.show #girl-left {
-    left: 27.5%;
-    transform: translateX(-16%); /*-16 */
- }
- 
- #figures.show #girl-right {
-    right: 27.5%;
-    transform: translateX(16%); /*16*/
- }
- 
- .heart {
+}
+
+#figures.show #girl-left {
+    left: 10%; /* Adjusted for better responsiveness */
+    transform: translateX(0);
+}
+
+#figures.show #girl-right {
+    right: 10%; /* Adjusted for better responsiveness */
+    transform: translateX(0);
+}
+
+.heart {
     position: absolute;
     width: 10px;
     height: 10px;
     background-color: red;
     transform: rotate(-45deg);
     animation: fall 4s infinite;
- }
- 
- .heart::before,
- .heart::after {
+}
+
+.heart::before,
+.heart::after {
     content: '';
     position: absolute;
     width: 10px;
     height: 10px;
     background-color: red;
     border-radius: 50%;
- }
- 
- .heart::before {
+}
+
+.heart::before {
     top: -5px;
     left: 0;
- }
- 
- .heart::after {
+}
+
+.heart::after {
     top: 0;
     left: -5px;
- }
- 
- @keyframes fall {
+}
+
+@keyframes fall {
     0% {
         transform: translateY(0) rotate(0);
     }
     100% {
         transform: translateY(100vh) rotate(360deg);
     }
- }
- 
+}
